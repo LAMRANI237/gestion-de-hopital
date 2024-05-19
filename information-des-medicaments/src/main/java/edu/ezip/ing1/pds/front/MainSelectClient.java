@@ -50,7 +50,7 @@ public class MainSelectClient extends JFrame {
 
         // Create table model with column names
         tableModel = new DefaultTableModel();
-        tableModel.setColumnIdentifiers(new String[]{"ID", "Nom Médicament", "Description", "Effet Secondaire"});
+        tableModel.setColumnIdentifiers(new String[]{"ID", "Nom Médicament", "Description", "Effet Secondaire","id_Similaire"});
 
         // Create table with the model
         table = new JTable(tableModel);
@@ -116,7 +116,8 @@ public class MainSelectClient extends JFrame {
                     student.getMedicament_id(),
                     student.getNom_medicament(),
                     student.getDescription(),
-                    student.getEffet_secondaire()
+                    student.getEffet_secondaire(),
+                    student.getId_Similaire()
             });
         }
     }

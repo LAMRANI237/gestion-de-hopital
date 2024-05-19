@@ -17,6 +17,10 @@ public class Main {
         frame.setVisible(true);
     }
 
+    public Object getContentPane() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
 }
 
 class MainFrame extends JFrame {
@@ -48,7 +52,7 @@ class MainFrame extends JFrame {
         button1.setFocusPainted(false);
 
         // Create the second button
-        JButton button2 = new JButton("Historique des medicaments");
+        JButton button2 = new JButton("liste des medicament");
         button2.setBounds(400, 300, 250, 30); // Set bounds (x, y, width, height)
         add(button2); // Add button to frame
         button2.setFont(new Font("Arial", Font.BOLD, 14));
@@ -57,13 +61,13 @@ class MainFrame extends JFrame {
         button2.setFocusPainted(false); // Suppression du rectangle de focus
 
 
-        JButton button3 = new JButton("liste des medicament");
-        button3.setBounds(400, 350, 250, 30); // Set bounds (x, y, width, height)
-        add(button3); // Add button to frame
-        button3.setFont(new Font("Arial", Font.BOLD, 14));
-        button3.setBackground(new Color(100, 189, 188)); // Couleur de fond
-        button3.setForeground(Color.WHITE); // Couleur du texte
-        button3.setFocusPainted(false); // Suppression du rectangle de focus
+      //  JButton button3 = new JButton("liste des medicament");
+       // button3.setBounds(400, 350, 250, 30); // Set bounds (x, y, width, height)
+       // add(button3); // Add button to frame
+       // button3.setFont(new Font("Arial", Font.BOLD, 14));
+       // button3.setBackground(new Color(100, 189, 188)); // Couleur de fond
+       // button3.setForeground(Color.WHITE); // Couleur du texte
+       // button3.setFocusPainted(false); // Suppression du rectangle de focus
 
         // À l'est pas possible car il n'y a que le haut
 
@@ -82,15 +86,13 @@ class MainFrame extends JFrame {
 
         // Action listener for button2
         button2.addActionListener((ActionEvent e) -> {
-            
-        });
-
-        button3.addActionListener((ActionEvent e) -> {
             MainSelectClient mainSelectClient = new MainSelectClient();
             mainSelectClient.setVisible(true);
             dispose();
-
+            
+            
         });
+
     }
 
 }
